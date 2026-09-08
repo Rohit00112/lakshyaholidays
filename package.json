@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "node scripts/check-travel.mjs",
+    "test:seo": "node scripts/check-seo.mjs"
   },
   "dependencies": {
     "next": "16.3.4",
@@ -14,9 +16,9 @@
     "react-dom": "19.2.8"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.3.3",
     "eslint": "^9",
     "eslint-config-next": "16.3.4",
-    "tailwindcss": "^4"
+    "tailwindcss": "^4.3.3"
   }
 }

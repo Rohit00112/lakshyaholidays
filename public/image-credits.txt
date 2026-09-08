@@ -1,0 +1,9 @@
+Kedarnath Temple photograph (kedarnath.webp)
+Author: Niranjanofficial542
+Source: https://commons.wikimedia.org/wiki/File:Kedarnath_Temple_Uttarakhand_India.webp
+License: CC0 1.0 Universal Public Domain Dedication
+License URL: https://creativecommons.org/publicdomain/zero/1.0/
+The original file is unchanged; the website displays a responsive crop.
+
+Other destination imagery and the logo were already present in this project.
+The two sample package sheets were supplied by Lakshya Holidays.
