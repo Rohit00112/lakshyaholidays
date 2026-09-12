@@ -150,10 +150,19 @@ export default function Contact({ selectedTrip, onTripChange }) {
                     <option key={trip.id}>{trip.name}</option>
                   ))}
                 </optgroup>
-                <optgroup label="Destinations">
-                  {destinations.map((destination) => (
-                    <option key={destination.name}>{destination.name}</option>
-                  ))}
+                <optgroup label="India Tours">
+                  {destinations
+                    .filter((d) => d.country === "India")
+                    .map((d) => (
+                      <option key={d.name}>{d.name}</option>
+                    ))}
+                </optgroup>
+                <optgroup label="Nepal Tours">
+                  {destinations
+                    .filter((d) => d.country === "Nepal")
+                    .map((d) => (
+                      <option key={d.name}>{d.name}</option>
+                    ))}
                 </optgroup>
               </select>
             </label>

@@ -10,7 +10,14 @@ export default function Destinations({ onEnquire }) {
   const [search, setSearch] = useState("");
   const [showAll, setShowAll] = useState(false);
   const results = filterDestinations(category, search);
-  const visible = showAll ? results : results.slice(0, 3);
+
+  /* Split results into cards (have images) and list-only items */
+  const withImage = results.filter((d) => d.image);
+  const visibleCards = showAll ? withImage : withImage.slice(0, 6);
+
+  /* Group list items by country */
+  const indiaList = results.filter((d) => d.country === "India");
+  const nepalList = results.filter((d) => d.country === "Nepal");
 
   return (
     <section id="destinations" className="section destinations-section">
@@ -18,7 +25,7 @@ export default function Destinations({ onEnquire }) {
         <div className="section-heading reveal">
           <div>
             <p className="eyebrow">
-              EXPLORE NEPAL & INDIA WITH LAKSHYA HOLIDAYS
+              EXPLORE NEPAL &amp; INDIA WITH LAKSHYA HOLIDAYS
             </p>
             <h2>Where will your curiosity take you?</h2>
           </div>
@@ -62,48 +69,126 @@ export default function Destinations({ onEnquire }) {
           </label>
         </div>
         <p className="sr-only" role="status">
-          {results.length} destinations found. Showing {visible.length}.
+          {results.length} destinations found.
         </p>
-        <div className="destination-grid">
-          {visible.map((destination) => (
-            <article className="destination-card" key={destination.name}>
-              <div className="destination-photo">
-                {destination.image ? (
+
+        {/* ── Featured image cards ────────────────────────── */}
+        {visibleCards.length > 0 && (
+          <div className="destination-grid">
+            {visibleCards.map((destination) => (
+              <article className="destination-card" key={destination.name}>
+                <div className="destination-photo">
                   <Image
                     src={destination.image}
                     alt={destination.name}
                     fill
                     sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
                   />
-                ) : (
-                  <div className="destination-placeholder">
-                    <Icon name="compass" />
-                    <span>Your next discovery</span>
-                  </div>
-                )}
-                <span className="photo-badge">{destination.type}</span>
-              </div>
-              <div className="destination-body">
-                <p className="eyebrow country">
+                  <span className="photo-badge">{destination.type}</span>
+                </div>
+                <div className="destination-body">
+                  <p className="eyebrow country">
+                    <Icon name="pin" />
+                    {destination.country}
+                    {destination.days && (
+                      <span className="duration-badge">
+                        {destination.days} days
+                      </span>
+                    )}
+                  </p>
+                  <h3>{destination.name}</h3>
+                  <p>{destination.description}</p>
+                  <button
+                    className="destination-link"
+                    aria-label={`Plan a trip to ${destination.name}`}
+                    onClick={() => onEnquire(destination.name)}
+                  >
+                    Let&#39;s explore{" "}
+                    <span className="circle-icon">
+                      <Icon name="diagonal" />
+                    </span>
+                  </button>
+                </div>
+              </article>
+            ))}
+          </div>
+        )}
+
+        {withImage.length > 6 && (
+          <div className="destination-more">
+            <button
+              className="text-link"
+              aria-expanded={showAll}
+              onClick={() => setShowAll(!showAll)}
+            >
+              {showAll
+                ? "Show fewer destinations"
+                : `See all ${withImage.length} featured destinations`}
+              <Icon name="arrow" />
+            </button>
+          </div>
+        )}
+
+        {/* ── Categorized tour list ──────────────────────── */}
+        {(indiaList.length > 0 || nepalList.length > 0) && (
+          <div className="tour-list-section">
+            {indiaList.length > 0 && (
+              <div className="tour-list-group">
+                <h3 className="tour-list-heading">
                   <Icon name="pin" />
-                  {destination.country}
-                </p>
-                <h3>{destination.name}</h3>
-                <p>{destination.description}</p>
-                <button
-                  className="destination-link"
-                  aria-label={`Plan a trip to ${destination.name}`}
-                  onClick={() => onEnquire(destination.name)}
-                >
-                  Let’s explore{" "}
-                  <span className="circle-icon">
-                    <Icon name="diagonal" />
-                  </span>
-                </button>
+                  India Tours
+                  <span className="tour-list-count">{indiaList.length}</span>
+                </h3>
+                <ul className="tour-list">
+                  {indiaList.map((d) => (
+                    <li key={d.name} className="tour-list-item">
+                      <button onClick={() => onEnquire(d.name)}>
+                        <span className="tour-list-name">{d.name}</span>
+                        <span className="tour-list-meta">
+                          {d.days && (
+                            <span className="duration-badge">
+                              {d.days} days
+                            </span>
+                          )}
+                          <span className="tour-list-type">{d.type}</span>
+                          <Icon name="arrow" />
+                        </span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </article>
-          ))}
-        </div>
+            )}
+            {nepalList.length > 0 && (
+              <div className="tour-list-group">
+                <h3 className="tour-list-heading">
+                  <Icon name="pin" />
+                  Nepal Tours
+                  <span className="tour-list-count">{nepalList.length}</span>
+                </h3>
+                <ul className="tour-list">
+                  {nepalList.map((d) => (
+                    <li key={d.name} className="tour-list-item">
+                      <button onClick={() => onEnquire(d.name)}>
+                        <span className="tour-list-name">{d.name}</span>
+                        <span className="tour-list-meta">
+                          {d.days && (
+                            <span className="duration-badge">
+                              {d.days} days
+                            </span>
+                          )}
+                          <span className="tour-list-type">{d.type}</span>
+                          <Icon name="arrow" />
+                        </span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
+
         {results.length === 0 && (
           <div className="empty-state">
             <Icon name="compass" />
@@ -120,21 +205,11 @@ export default function Destinations({ onEnquire }) {
             </button>
           </div>
         )}
-        {results.length > 3 && (
-          <div className="destination-more">
-            <button
-              className="text-link"
-              aria-expanded={showAll}
-              onClick={() => setShowAll(!showAll)}
-            >
-              {showAll
-                ? "Show fewer destinations"
-                : `Explore all ${results.length} destinations`}
-              <Icon name="arrow" />
-            </button>
-            <span>Every journey can be made your own.</span>
-          </div>
-        )}
+        <p className="destination-note">
+          <Icon name="document" />
+          All tours depart from Birtamode, Jhapa. Contact us for departure
+          dates, inclusions, and pricing.
+        </p>
       </div>
     </section>
   );
