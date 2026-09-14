@@ -29,7 +29,10 @@ for (const path of paths) {
   assert.equal(new URL(canonical[0].href).href, new URL(path, siteUrl).href);
   const title = html.match(/<title>([^<]+)<\/title>/)?.[1];
   const description = tags.find((tag) => tag.name === "description")?.content;
-  assert.ok(title?.includes("Birtamode"), `${path}: local search title`);
+  assert.ok(
+    title?.includes("Birtamode") || title?.includes("Eastern Nepal"),
+    `${path}: local search title`,
+  );
   assert.ok(description?.length > 80, `${path}: useful search description`);
   assert.ok(!titles.has(title), `${path}: unique title`);
   assert.ok(!descriptions.has(description), `${path}: unique description`);

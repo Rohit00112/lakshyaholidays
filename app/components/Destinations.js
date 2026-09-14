@@ -207,7 +207,7 @@ export default function Destinations({ onEnquire }) {
         )}
         <p className="destination-note">
           <Icon name="document" />
-          All tours depart from Birtamode, Jhapa. Contact us for departure
+          All tours depart from Eastern Nepal. Contact us for departure
           dates, inclusions, and pricing.
         </p>
       </div>

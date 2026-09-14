@@ -52,11 +52,11 @@ export default async function PackagePage({ params }) {
         </nav>
         <section className="package-intro">
           <div>
-            <p className="eyebrow">PILGRIMAGE PACKAGES FROM BIRTAMODE, NEPAL</p>
+            <p className="eyebrow">PILGRIMAGE PACKAGES FROM EASTERN NEPAL</p>
             <h1>
               {trip.name}
               <br />
-              <em>from Birtamode.</em>
+              <em>from Eastern Nepal.</em>
             </h1>
             <p>{trip.description}</p>
             <p className="trip-facts">

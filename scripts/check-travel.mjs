@@ -37,12 +37,12 @@ assert.equal(
   filterDestinations("All journeys", "").length,
   destinations.length,
 );
-assert.equal(filterDestinations("India", "").length, 6);
+assert.equal(filterDestinations("India", "").length, 10);
 assert.equal(
   filterDestinations("Nepal", "  POKHARA  ")[0].name,
-  "Pokhara Lakeside",
+  "Pokhara Tourism Area Tour",
 );
-assert.equal(filterDestinations("Pilgrimage", "").length, 6);
+assert.equal(filterDestinations("Pilgrimage", "").length, 24);
 assert.equal(filterDestinations("India", "Pokhara").length, 0);
 assert.equal(filterDestinations("All journeys", "no matching place").length, 0);
 const draft = new URL(

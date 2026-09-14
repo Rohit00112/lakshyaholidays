@@ -78,8 +78,8 @@ export const businessStructuredData = {
 };
 
 export function packageMetadata(trip) {
-  const title = `${trip.name} from Birtamode | Lakshya Holidays`;
-  const description = `${trip.days}-day ${trip.name} package from Birtamode: ${trip.nights} nights at NPR ${trip.price.toLocaleString("en-IN")} per person. View destinations and enquire about departure dates.`;
+  const title = `${trip.name} from Eastern Nepal | Lakshya Holidays`;
+  const description = `${trip.days}-day ${trip.name} package from Eastern Nepal: ${trip.nights} nights at NPR ${trip.price.toLocaleString("en-IN")} per person. View destinations and enquire about departure dates.`;
   const url = `${siteUrl}/packages/${trip.id}`;
   return {
     title,

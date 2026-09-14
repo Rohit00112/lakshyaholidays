@@ -10,12 +10,12 @@ export default function Packages({ onEnquire }) {
         <div className="section-heading reveal">
           <div>
             <p className="eyebrow">MEANINGFUL PLACES. MEMORABLE JOURNEYS.</p>
-            <h2>Pilgrimage packages from Birtamode.</h2>
+            <h2>Pilgrimage packages from Eastern Nepal.</h2>
           </div>
           <p>
             Leave the everyday behind. Explore our featured
             <br className="desktop-break" /> pilgrimages, starting from
-            Birtamode.
+            Eastern Nepal.
           </p>
         </div>
         <div className="package-grid">
