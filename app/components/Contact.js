@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Icon from "./Icon";
-import { contact, destinations, packages, enquiryUrl } from "../travel.mjs";
+import { contact, destinations, packages, enquiryUrl, departureDateMinimum, shortlistTrip } from "../travel.mjs";
 
 const questions = [
   [
@@ -23,14 +23,20 @@ const questions = [
   ],
 ];
 
-export default function Contact({ selectedTrip, onTripChange }) {
+export default function Contact({ selectedTrip, onTripChange, shortlist }) {
   const [draft, setDraft] = useState(null);
+  const [dateError, setDateError] = useState("");
+  const shortlistKey = selectedTrip === shortlistTrip ? shortlist.join("\n") : "";
 
   function handleSubmit(event) {
     event.preventDefault();
     const data = Object.fromEntries(new FormData(event.currentTarget));
-    const url = enquiryUrl(data);
-    setDraft({ url, trip: data.trip });
+    if (data.date && data.date < departureDateMinimum()) {
+      setDateError("Choose today or a later departure date.");
+      return;
+    }
+    const url = enquiryUrl({ ...data, shortlist: selectedTrip === shortlistTrip ? shortlist : [] });
+    setDraft({ url, trip: data.trip, shortlistKey });
     window.open(url, "_blank", "noopener,noreferrer");
   }
 
@@ -106,7 +112,7 @@ export default function Contact({ selectedTrip, onTripChange }) {
           </div>
           <form
             onSubmit={handleSubmit}
-            onChange={() => setDraft(null)}
+            onChange={() => { setDraft(null); setDateError(""); }}
             className="enquiry-form"
           >
             <h3>Let’s plan something memorable.</h3>
@@ -145,6 +151,7 @@ export default function Contact({ selectedTrip, onTripChange }) {
                 onChange={(event) => onTripChange(event.target.value)}
               >
                 <option>A custom journey</option>
+                {shortlist.length > 0 && <option value={shortlistTrip}>My shortlist ({shortlist.length} {shortlist.length === 1 ? "destination" : "destinations"})</option>}
                 <optgroup label="Featured packages">
                   {packages.map((trip) => (
                     <option key={trip.id}>{trip.name}</option>
@@ -166,10 +173,18 @@ export default function Contact({ selectedTrip, onTripChange }) {
                 </optgroup>
               </select>
             </label>
+            {selectedTrip === shortlistTrip && (
+              <div className="enquiry-shortlist">
+                <p><Icon name="heart" /> Your journey shortlist</p>
+                <ul>{shortlist.map((name) => <li key={name}>{name}</li>)}</ul>
+                <a href="#destinations" className="text-link">Edit your places <Icon name="arrow" /></a>
+              </div>
+            )}
             <div className="form-row">
               <label htmlFor="contact-date">
                 Preferred departure <span>(optional)</span>
-                <input type="date" id="contact-date" name="date" />
+                <input type="date" id="contact-date" name="date" onFocus={(event) => { event.currentTarget.min = departureDateMinimum(); }} aria-invalid={Boolean(dateError)} aria-describedby={dateError ? "contact-date-error" : undefined} />
+                {dateError && <small className="form-error" id="contact-date-error" role="alert">{dateError}</small>}
               </label>
               <label htmlFor="contact-travelers">
                 Number of travelers
@@ -203,7 +218,7 @@ export default function Contact({ selectedTrip, onTripChange }) {
               Opens WhatsApp with your trip details. Review and send your
               message there to start the conversation.
             </p>
-            {draft?.trip === selectedTrip && (
+            {draft?.trip === selectedTrip && draft?.shortlistKey === shortlistKey && (
               <p role="status" className="form-status">
                 Your draft is ready.{" "}
                 <a href={draft.url} target="_blank" rel="noopener noreferrer">

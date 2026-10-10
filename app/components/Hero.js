@@ -2,7 +2,7 @@ import Image from "next/image";
 import Icon from "./Icon";
 import { packages } from "../travel.mjs";
 
-export default function Hero() {
+export default function Hero({ onExploreTemples }) {
   const featured = packages[1];
   return (
     <section id="home" className="hero">
@@ -80,11 +80,11 @@ export default function Hero() {
           </span>
           <Icon name="diagonal" />
         </a>
-        <a href="#destinations">
-          <Icon name="mountain" />
+        <a href="#destinations" onClick={onExploreTemples}>
+          <Icon name="temple" />
           <span>
-            <strong>A little adventure</strong>
-            <small>Mountains, culture & more</small>
+            <strong>Nepal temple trails</strong>
+            <small>Find your own sacred path</small>
           </span>
           <Icon name="diagonal" />
         </a>

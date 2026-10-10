@@ -20,7 +20,17 @@ npm run build
 npm start
 ```
 
-The checks verify the supplied package details, brochure files, destination filters, and encoded WhatsApp drafts.
+The checks verify the supplied package details, brochure and destination image files, combined destination filters, Google Maps links, Nepal date boundaries, and encoded WhatsApp drafts with multiple destinations.
+
+## Explore and plan
+
+The destination explorer includes 12 additional Nepal temple destinations, for 48 destinations in total. Visitors can combine country and experience filters and search English names, Nepali temple names, aliases, descriptions, cities, and districts. Nepal temple journeys are featured first, and more cards load in groups of six. Each card has visit details, a map link, a shortlist button, and a trip enquiry action.
+
+The homepage’s “Nepal temple trails” shortcut opens Nepal pilgrimage results. Visitors can add several destinations to a shortlist and carry them into a single WhatsApp enquiry. The shortlist is kept while the homepage remains open; refreshing or leaving the page clears it. No personal form details are stored. Departure dates must be today or later, using Nepal time.
+
+New temple descriptions and locations were checked against [Nepal Tourism Board pilgrimage guides](https://ntb.gov.np/pilgrimage-tours), including its individual temple pages. Photographs are from Wikimedia Commons; each photograph’s author, source, license, and crop notice appears under “Visit details” and in `public/image-credits.txt`. Destinations are custom enquiry ideas, without invented prices or availability.
+
+The framework and its lint configuration are patched to 16.3.8. The production dependency audit is clean. Five audit findings remain in the development-only lint dependency chain (`braces` → `micromatch` → `fast-glob` → the Next.js lint plugin/config); the proposed automated fix downgrades the lint configuration to Next.js 14, so it was not applied.
 
 ## Update content
 

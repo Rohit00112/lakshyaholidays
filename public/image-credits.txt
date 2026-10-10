@@ -7,3 +7,61 @@ The original file is unchanged; the website displays a responsive crop.
 
 Other destination imagery and the logo were already present in this project.
 The two sample package sheets were supplied by Lakshya Holidays.
+
+Nepal temple destination photographs
+
+Ram Janaki Mandir Darshan (/temples/janaki.jpg)
+Author: Abhishek Dutta
+Source: https://commons.wikimedia.org/wiki/File:Janki_Mandir_alt_version.jpg
+License: CC BY 3.0
+License URL: https://creativecommons.org/licenses/by/3.0/
+A Wikimedia thumbnail is stored locally; the website displays a responsive crop.
+
+Pashupatinath Darshan (/temples/pashupatinath.jpg)
+Author: Bijay Chaurasia
+Source: https://commons.wikimedia.org/wiki/File:Pashupatinath_Temple-2020.jpg
+License: CC BY-SA 4.0
+License URL: https://creativecommons.org/licenses/by-sa/4.0/
+A Wikimedia thumbnail is stored locally; the website displays a responsive crop.
+
+Muktinath Darshan (/temples/muktinath.jpg)
+Author: Ironicfreak
+Source: https://commons.wikimedia.org/wiki/File:The_Muktinath_Temple.jpg
+License: CC BY-SA 4.0
+License URL: https://creativecommons.org/licenses/by-sa/4.0/
+A Wikimedia thumbnail is stored locally; the website displays a responsive crop.
+
+Pathibhara Devi Darshan (/temples/pathibhara.jpg)
+Author: Avista7
+Source: https://commons.wikimedia.org/wiki/File:Pathibhara_2014.JPG
+License: CC BY-SA 4.0
+License URL: https://creativecommons.org/licenses/by-sa/4.0/
+A Wikimedia thumbnail is stored locally; the website displays a responsive crop.
+
+Changu Narayan Temple (/temples/changu-narayan.jpg)
+Author: Dhilung Kirat
+Source: https://commons.wikimedia.org/wiki/File:Nepal_-_Changu_Narayan_(3566057331).jpg
+License: CC BY 2.0
+License URL: https://creativecommons.org/licenses/by/2.0/
+A Wikimedia thumbnail is stored locally; the website displays a responsive crop.
+
+Budhanilkantha Temple (/temples/budhanilkantha.jpg)
+Author: Chainwit.
+Source: https://commons.wikimedia.org/wiki/File:Budhanilkantha_Narayan_Murti_(2023)_-_IMG_03.jpg
+License: CC BY-SA 4.0
+License URL: https://creativecommons.org/licenses/by-sa/4.0/
+A Wikimedia thumbnail is stored locally; the website displays a responsive crop.
+
+Bindhyabasini Temple (/temples/bindhyabasini.jpg)
+Author: Dhurba Gurung
+Source: https://commons.wikimedia.org/wiki/File:Bindabasini_temple_pokhara.JPG
+License: CC BY-SA 4.0
+License URL: https://creativecommons.org/licenses/by-sa/4.0/
+A Wikimedia thumbnail is stored locally; the website displays a responsive crop.
+
+Tal Barahi Temple (/temples/tal-barahi.jpg)
+Author: Debarshi Ray
+Source: https://commons.wikimedia.org/wiki/File:Barahi_Temple_(9191444126)_(cropped).jpg
+License: CC BY-SA 2.0
+License URL: https://creativecommons.org/licenses/by-sa/2.0/
+A Wikimedia thumbnail is stored locally; the website displays a responsive crop.

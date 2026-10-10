@@ -42,6 +42,11 @@ const paths = {
   ),
   check: <path d="m5 12 4 4L19 6" />,
   plus: <path d="M12 5v14M5 12h14" />,
+  close: <path d="m6 6 12 12M6 18 18 6" />,
+  heart: <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0l-1 1-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z" />,
+  temple: <>
+    <path d="M12 3v2m-8 4 8-4 8 4H4Zm2 5 6-4 6 4H6ZM4 21h16M7 14v7m10-7v7M10 21v-5h4v5" />
+  </>,
   search: (
     <>
       <circle cx="10.5" cy="10.5" r="6.5" />

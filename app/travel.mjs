@@ -147,18 +147,32 @@ export const destinations = [
     name: "Barahakshetra Dham",
     country: "Nepal",
     type: "Pilgrimage",
+    location: "Sunsari",
     description: "Pilgrimage to the ancient Barahakshetra temple in Sunsari.",
   },
   {
     name: "Haleshi Mahadev Darshan",
     country: "Nepal",
     type: "Pilgrimage",
+    location: "Khotang",
+    aliases: "Halesi Mahadev",
     description: "Visit the revered Haleshi Mahadev cave temple in Khotang.",
   },
   {
     name: "Ram Janaki Mandir Darshan",
     country: "Nepal",
     type: "Pilgrimage",
+    location: "Janakpur, Dhanusha",
+    nepaliName: "जानकी मन्दिर",
+    featured: true,
+    image: "/temples/janaki.jpg",
+    imageAlt: "White arches and domes of Janaki Mandir in Janakpur",
+    imageCredit: {
+      author: "Abhishek Dutta",
+      source: "https://commons.wikimedia.org/wiki/File:Janki_Mandir_alt_version.jpg",
+      license: "CC BY 3.0",
+      licenseUrl: "https://creativecommons.org/licenses/by/3.0/",
+    },
     description: "Explore the grand Ram Janaki temple in Janakpur.",
   },
   {
@@ -178,18 +192,21 @@ export const destinations = [
     name: "Manakamana Mata Darshan",
     country: "Nepal",
     type: "Pilgrimage",
+    location: "Gorkha",
     description: "Cable-car ride to the wish-fulfilling Manakamana temple.",
   },
   {
     name: "Kalinchowk Bhagwati Darshan",
     country: "Nepal",
     type: "Pilgrimage",
+    location: "Dolakha",
     description: "Hilltop temple visit with panoramic Himalayan views.",
   },
   {
     name: "Swayambhunath Darshan",
     country: "Nepal",
     type: "Pilgrimage",
+    location: "Kathmandu",
     image: "/kathmandu.jpg",
     description: "The iconic monkey temple overlooking Kathmandu Valley.",
   },
@@ -197,12 +214,27 @@ export const destinations = [
     name: "Pashupatinath Darshan",
     country: "Nepal",
     type: "Pilgrimage",
+    location: "Kathmandu",
+    nepaliName: "पशुपतिनाथ मन्दिर",
+    featured: true,
+    image: "/temples/pashupatinath.jpg",
+    imageAlt: "Golden roof of Pashupatinath Temple above its riverside shrines",
+    visitNote: "The main temple has entry restrictions. Ask our team about access and the riverside areas before your visit.",
+    source: "https://ntb.gov.np/pashupatinath",
+    imageCredit: {
+      author: "Bijay Chaurasia",
+      source: "https://commons.wikimedia.org/wiki/File:Pashupatinath_Temple-2020.jpg",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    },
     description: "Nepal's holiest Hindu temple on the banks of the Bagmati.",
   },
   {
     name: "Boudha Chaitya Stupa",
     country: "Nepal",
     type: "Culture",
+    location: "Kathmandu",
+    aliases: "Boudhanath Boudha",
     description: "One of the largest Buddhist stupas in the world, in Kathmandu.",
   },
   {
@@ -228,6 +260,7 @@ export const destinations = [
     name: "Pokhara Tourism Area Tour",
     country: "Nepal",
     type: "Leisure",
+    location: "Pokhara, Kaski",
     image: "/pokhara.jpg",
     description: "Slow mornings by the lake. Mountains on the horizon.",
   },
@@ -241,12 +274,25 @@ export const destinations = [
     name: "Baglung Kalika Mandir Darshan",
     country: "Nepal",
     type: "Pilgrimage",
+    location: "Baglung",
     description: "Visit the hilltop Kalika temple in Baglung district.",
   },
   {
     name: "Muktinath Darshan",
     country: "Nepal",
     type: "Pilgrimage",
+    location: "Mustang",
+    nepaliName: "मुक्तिनाथ मन्दिर",
+    featured: true,
+    image: "/temples/muktinath.jpg",
+    imageAlt: "Muktinath Temple surrounded by stone walls in Mustang",
+    visitNote: "A high-altitude journey. Discuss acclimatisation, road conditions, and your group's travel needs with our team.",
+    imageCredit: {
+      author: "Ironicfreak",
+      source: "https://commons.wikimedia.org/wiki/File:The_Muktinath_Temple.jpg",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    },
     description: "Sacred temple of salvation at the foot of Thorong La.",
   },
   {
@@ -298,27 +344,207 @@ export const destinations = [
     type: "Pilgrimage",
     description: "Sacred hilltop temple in the Jajarkot district.",
   },
+  {
+    name: "Pathibhara Devi Darshan",
+    nepaliName: "पाथीभरा देवी मन्दिर",
+    aliases: "Pathivara",
+    country: "Nepal",
+    type: "Pilgrimage",
+    location: "Taplejung",
+    featured: true,
+    image: "/temples/pathibhara.jpg",
+    imageAlt: "Devotees and prayer flags at the Pathibhara hilltop shrine",
+    description: "A hilltop shrine in eastern Nepal, with prayer flags and views of the surrounding mountains.",
+    visitNote: "This route includes an uphill walk. Share your group's walking needs so we can discuss a suitable travel plan.",
+    source: "https://ntb.gov.np/pilgrimage-tours",
+    imageCredit: {
+      author: "Avista7",
+      source: "https://commons.wikimedia.org/wiki/File:Pathibhara_2014.JPG",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    },
+  },
+  {
+    name: "Changu Narayan Temple",
+    nepaliName: "चाँगुनारायण मन्दिर",
+    country: "Nepal",
+    type: "Pilgrimage",
+    location: "Bhaktapur",
+    featured: true,
+    image: "/temples/changu-narayan.jpg",
+    imageAlt: "Traditional pagoda architecture at Changu Narayan Temple",
+    description: "Discover a hilltop Vishnu temple, intricate carvings, and the heritage of the Kathmandu Valley.",
+    visitNote: "Pair the temple with a visit to Bhaktapur. Ask our team about the walking route and entry fees.",
+    source: "https://ntb.gov.np/changu-narayan-temple",
+    imageCredit: {
+      author: "Dhilung Kirat",
+      source: "https://commons.wikimedia.org/wiki/File:Nepal_-_Changu_Narayan_(3566057331).jpg",
+      license: "CC BY 2.0",
+      licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
+    },
+  },
+  {
+    name: "Budhanilkantha Temple",
+    nepaliName: "बूढानीलकण्ठ मन्दिर",
+    aliases: "Sleeping Vishnu Narayan",
+    country: "Nepal",
+    type: "Pilgrimage",
+    location: "Kathmandu",
+    featured: true,
+    image: "/temples/budhanilkantha.jpg",
+    imageAlt: "Reclining stone statue of Vishnu at Budhanilkantha",
+    description: "Visit the reclining stone Vishnu at the foot of the Shivapuri hills, in northern Kathmandu.",
+    source: "https://ntb.gov.np/budhanilkantha",
+    imageCredit: {
+      author: "Chainwit.",
+      source: "https://commons.wikimedia.org/wiki/File:Budhanilkantha_Narayan_Murti_(2023)_-_IMG_03.jpg",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    },
+  },
+  {
+    name: "Dakshinkali Temple",
+    nepaliName: "दक्षिणकाली मन्दिर",
+    country: "Nepal",
+    type: "Pilgrimage",
+    location: "Pharping, Kathmandu",
+    description: "A shrine to Goddess Kali in the southern Kathmandu Valley, surrounded by wooded hills.",
+    visitNote: "Religious rituals here can include animal sacrifice. Tell our team your preferences when planning a visit.",
+    source: "https://ntb.gov.np/dakshinkali-",
+  },
+  {
+    name: "Guhyeshwari Temple",
+    nepaliName: "गुह्येश्वरी मन्दिर",
+    country: "Nepal",
+    type: "Pilgrimage",
+    location: "Kathmandu",
+    description: "Discover a revered Shakti shrine near Pashupatinath, beside the Bagmati River.",
+    source: "https://trade.ntb.gov.np/tourist-destination/pilgrimage-sites-2/",
+  },
+  {
+    name: "Krishna Mandir, Patan",
+    nepaliName: "कृष्ण मन्दिर",
+    country: "Nepal",
+    type: "Pilgrimage",
+    location: "Patan, Lalitpur",
+    description: "Stone-carved temple architecture and living traditions in the heart of Patan Durbar Square.",
+    source: "https://trade.ntb.gov.np/tourist-destination/around-kathmandu/",
+  },
+  {
+    name: "Bindhyabasini Temple",
+    nepaliName: "बिन्ध्यवासिनी मन्दिर",
+    country: "Nepal",
+    type: "Pilgrimage",
+    location: "Pokhara, Kaski",
+    image: "/temples/bindhyabasini.jpg",
+    imageAlt: "White Bindhyabasini Temple and its courtyard in Pokhara",
+    description: "Add a visit to Pokhara's hilltop goddess temple to your lakeside escape.",
+    source: "https://ntb.gov.np/bindhyabasini--kaski",
+    imageCredit: {
+      author: "Dhurba Gurung",
+      source: "https://commons.wikimedia.org/wiki/File:Bindabasini_temple_pokhara.JPG",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    },
+  },
+  {
+    name: "Tal Barahi Temple",
+    nepaliName: "ताल बाराही मन्दिर",
+    aliases: "Taal Barahi Phewa Fewa",
+    country: "Nepal",
+    type: "Pilgrimage",
+    location: "Phewa Lake, Pokhara",
+    image: "/temples/tal-barahi.jpg",
+    imageAlt: "Island shrine of Tal Barahi Temple on Phewa Lake",
+    description: "A boat journey across Phewa Lake to a temple on an island in Pokhara.",
+    visitNote: "The temple is reached by boat. Confirm boat arrangements and current lake conditions with our team.",
+    source: "https://ntb.gov.np/en/taal-barahi--kaski",
+    imageCredit: {
+      author: "Debarshi Ray",
+      source: "https://commons.wikimedia.org/wiki/File:Barahi_Temple_(9191444126)_(cropped).jpg",
+      license: "CC BY-SA 2.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    },
+  },
+  {
+    name: "Palanchowk Bhagwati Temple",
+    nepaliName: "पलाञ्चोक भगवती मन्दिर",
+    country: "Nepal",
+    type: "Pilgrimage",
+    location: "Kavrepalanchok",
+    description: "A goddess shrine in the hills of Kavre, for a meaningful detour beyond the Kathmandu Valley.",
+    source: "https://ntb.gov.np/pilgrimage-tours",
+  },
+  {
+    name: "Jaleshwar Mahadev Temple",
+    nepaliName: "जलेश्वर महादेव मन्दिर",
+    country: "Nepal",
+    type: "Pilgrimage",
+    location: "Jaleshwar, Mahottari",
+    description: "Visit a Shiva shrine in the Madhesh plains and explore the sacred places around Janakpur.",
+    source: "https://ntb.gov.np/pilgrimage-tours",
+  },
+  {
+    name: "Bageshwari Temple",
+    nepaliName: "बागेश्वरी मन्दिर",
+    country: "Nepal",
+    type: "Pilgrimage",
+    location: "Nepalgunj, Banke",
+    description: "A revered goddess temple in Nepalgunj, on a journey through western Nepal.",
+    source: "https://ntb.gov.np/pilgrimage-tours",
+  },
+  {
+    name: "Badimalika Temple",
+    nepaliName: "बडीमालिका मन्दिर",
+    aliases: "Badi Malika",
+    country: "Nepal",
+    type: "Pilgrimage",
+    location: "Bajura",
+    description: "A remote hilltop pilgrimage through the open landscapes of far-western Nepal.",
+    visitNote: "This pilgrimage involves trekking in a remote area. Discuss seasonal access and preparation with our team.",
+    source: "https://ntb.gov.np/pilgrimage-tours",
+  },
 ];
 
-export function filterDestinations(category, search) {
-  const query = search.trim().toLowerCase();
+export function filterDestinations(category, search, experience = "All experiences") {
+  const words = search.trim().toLowerCase().split(/\s+/).filter(Boolean);
   return destinations.filter(
     (destination) =>
       (category === "All journeys" ||
         destination.country === category ||
         destination.type === category) &&
-      `${destination.name} ${destination.country} ${destination.type}`
-        .toLowerCase()
-        .includes(query),
+      (experience === "All experiences" || destination.type === experience) &&
+      words.every((word) =>
+        [destination.name, destination.nepaliName, destination.country,
+          destination.type, destination.location, destination.aliases,
+          destination.description].join(" ").toLowerCase().includes(word),
+      ),
+  ).sort((a, b) =>
+    Number(Boolean(b.featured)) - Number(Boolean(a.featured)) ||
+    Number(Boolean(b.image)) - Number(Boolean(a.image)),
   );
 }
 
-export function enquiryUrl({ name, phone, trip, date, travelers, message }) {
+export const shortlistTrip = "My destination shortlist";
+
+export function departureDateMinimum(now = new Date()) {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Kathmandu", year: "numeric", month: "2-digit", day: "2-digit",
+  }).format(now);
+}
+
+export function destinationMapUrl(destination) {
+  const query = [destination.name, destination.location, destination.country].filter(Boolean).join(", ");
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+}
+
+export function enquiryUrl({ name, phone, trip, date, travelers, message, shortlist = [] }) {
   const text = [
     "Namaste Lakshya Holidays! I would like to plan a trip.",
     `Name: ${name.trim()}`,
     phone.trim() && `Phone: ${phone.trim()}`,
     `Interested in: ${trip}`,
+    shortlist.length > 0 && `Places I'd like to visit: ${shortlist.join("; ")}`,
     date && `Preferred departure: ${date}`,
     `Travelers: ${travelers}`,
     message.trim() && `Message: ${message.trim()}`,

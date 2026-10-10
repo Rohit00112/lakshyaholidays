@@ -3,7 +3,7 @@ import { contact } from "./travel.mjs";
 export const siteUrl = "https://lakshyaholidays.com.np";
 const title = "Travel Agency in Birtamode, Nepal | Lakshya Holidays";
 const description =
-  "Plan Nepal and India tours with Lakshya Holidays in Birtamode, Jhapa. Explore Char Dham, Kedarnath and Badrinath packages, treks and custom holidays.";
+  "Plan Nepal temple tours and India pilgrimages with Lakshya Holidays in Birtamode, Jhapa. Explore Pashupatinath, Pathibhara, Muktinath and Char Dham, and build your own journey shortlist.";
 
 export const homeMetadata = {
   metadataBase: new URL(siteUrl),
